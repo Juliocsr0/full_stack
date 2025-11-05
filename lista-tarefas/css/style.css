@@ -44,3 +44,27 @@ body {
     border-radius: 6px;
     cursor: pointer;
 }
+
+#container a {
+    text-decoration: none;
+    color: #fff;
+    background: #007bff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+#container a:hover {
+    background: #0056b3;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: #fff;
+    background: #28a745;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+}
+.btn-link:hover { opacity: 0.9; }
