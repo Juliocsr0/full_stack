@@ -1,3 +1,5 @@
-// alert("Olá Mundo!");
-console.log("Oi, Júlio! Seu script.js está funcionando corretamente.");
-
+// Função em JavaScript
+function adicionar() {
+    alert("Olá, Júlio");
+    console.log("Olá, Júlio!");
+}
