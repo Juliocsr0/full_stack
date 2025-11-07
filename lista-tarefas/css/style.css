@@ -68,3 +68,9 @@ body {
     display: inline-block;
 }
 .btn-link:hover { opacity: 0.9; }
+
+#lista {
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
