@@ -1,4 +1,11 @@
-let numero1 = prompt("Digite um número:");
-let numero2 = prompt("Digite outro número:");
+let numero1 = Number(prompt("Digite um número:"));
+let numero2 = Number(prompt("Digite outro número:"));
 
-console.log("numero 2"+ "numero1");
+// Soma
+console.log("Soma:", numero1 + numero2);
+// Sub
+console.log("Subtração:", numero1 - numero2);
+// Mult
+console.log("Multiplicação:", numero1 * numero2);
+// Div
+console.log("Divisão:", numero1 / numero2);
