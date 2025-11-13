@@ -1,6 +1,6 @@
 const preco = 101
 
-if(preco >= 102) {
+if(preco >= 101) {
     console.log ("Muito alto")
 }
 

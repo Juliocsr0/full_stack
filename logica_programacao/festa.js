@@ -1,9 +1,9 @@
 let idade = 15
 
 if(idade >= 18) {
-    console.log("Tá liberado")
+    console.log("Entrada permitida")
 }
 
 else {
-    console.log("Vaza")
+    console.log("Entrada bloqueada")
 }
