@@ -18,6 +18,7 @@ const anoAtual = new Date().getFullYear();
 
 let anoEleicao = anoInicio; 
 while (anoEleicao <= anoAtual) {
-  console.log("Eleições:", anoEleicao);
+  let tipoAno = (anoInicio % 2 === 0) ? "Ano PAR" : "Ano IMPAR";
+  console.log("Eleições:", anoEleicao, tipoAno);
   anoEleicao = anoEleicao + 2;
 }
