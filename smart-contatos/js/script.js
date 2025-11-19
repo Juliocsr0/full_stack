@@ -2,6 +2,7 @@ const form = document.querySelector("form");
 const lista = document.querySelector(".lista");
 const inputNome = document.getElementById("nome");
 const inputEmail = document.getElementById("email");
+const inputEndereco = document.getElementById("endereco");
 const inputTel = document.getElementById("telefone");
 const listaMsg = document.querySelector(".lista-msg");
 
@@ -29,14 +30,22 @@ form.addEventListener("submit", function(event) {
     const li = document.createElement("li");
 
     // Criando uma função ara excluir
-    btnExcluir.addEventListener("click", function() {
-      alert("teste")
-    })
+   btnExcluir.addEventListener('click', function(event) {
+    const confirmar = confirm('Tem certeza que deseja excluir o(s) contato(s)?');
+    if (confirmar) {
+        const li = event.target.closest('li'); 
+        if (li) {
+            li.remove();
+        }
+    }
+});
+
 
     li.innerHTML = `
         <span class="contato-nome">${inputNome.value}</span>
         <span class="contato-email">${inputEmail.value}</span>
         <span class="contato-telefone">${inputTel.value}</span>
+        <span class="endereco">${inputEndereco.value}</span>
     `;
 
     console.log(li)
