@@ -19,8 +19,19 @@ form.addEventListener("submit", function(event) {
       listaMsg.remove();
     }
 
+    // Criando botão excluir
+    const btnExcluir = document.createElement("button");
+    btnExcluir.textContent = "Excluir";
+    btnExcluir.className = "btn-delete";
+
+
     // Criar LI
     const li = document.createElement("li");
+
+    // Criando uma função ara excluir
+    btnExcluir.addEventListener("click", function() {
+      alert("teste")
+    })
 
     li.innerHTML = `
         <span class="contato-nome">${inputNome.value}</span>
@@ -33,6 +44,7 @@ form.addEventListener("submit", function(event) {
 
     // appendChild()
     lista.appendChild(li)
+    li.appendChild(btnExcluir)
 
     // Limpar inputs
     form.reset();
