@@ -1,0 +1,37 @@
+body {
+    background: rgb(238, 231, 189);
+}
+html {
+  font-size: 6px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: Arial;
+}
+h2 {
+    font-size: medium;
+}
+
+h1 + p {
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.5rem;
+  color: red;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+p {
+    line-height: 1.6;
+}
+
+p::first-line {
+    letter-spacing: 4px;
+    word-spacing: 4px;
+}
+img {
+    filter: drop-shadow(0 0 1rem rgb(85, 84, 83));
+    box-shadow: 3px 3px 3rem rgb(71, 71, 70);
+}
