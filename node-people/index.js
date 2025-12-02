@@ -53,12 +53,7 @@ app.listen (port, () => {
 
 // Rota principal
 app.get("/", (req, res) => {
-    res.send("Bem vindo ao servidor principal!!!!!");
-});
-
-// Rota de teste
-app.get("/teste", (req, res) => {
-    res.send("Rota de teste funcionando!");
+    res.send("Bem vindo ao servidor principal!!!!!")
 });
 
 // Buscando nomes (lista nomes)
@@ -85,9 +80,15 @@ app.get("/listanomes/:id", (req, res) => {
     res.json(buscarNomePorId(index));
 })
 
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
-});
+// Criando rota para alteração (nomes)
+
+app.put("/listanomes/:id", (req, res) => {
+    let index = buscarIdNomes(req.params.id);
+    nomes[index].nome = req.body.nome;
+    nomes[index].idade = req.body.idade;
+
+    res.json(nomes)
+})
 
 //-----------------------------------------------------------------------
 
@@ -97,21 +98,32 @@ app.get("/listatimes", (req, res) => {
     res.json(times);
 });
 
-// Criando Post para cadastrar (times)
+// Criando Post para cadastrar (cadastro times)
 app.post("/listatimes", (req, res) => {
     times.push(req.body);
     res.status(201).send('Time cadastrado com sucesso!');
 });
 
-// Criando rota excluir (times)
+// Criando rota excluir (delete times)
 app.delete("/listatimes/:id", (req, res) => {
     let index = buscarIdTime(req.params.id);
     times.splice(index, 1);
-    res.send(`Time com id ${req.params.id} excluída com sucesso!`);
+    res.send(`Time com id ${req.params.id} excluída com sucesso!`)
 });
 
 // Buscando por id (times)
 app.get("/listatimes/:id", (req, res) => {
     let index = req.params.id;
-    res.json(buscarTimePorId(index));
+    res.json(buscarTimePorId(index))
+});
+
+// Criando rota para alteração (times)
+
+app.put("/listatimes/:id", (req, res) => {
+    let index = buscarIdTime(req.params.id);
+    times[index].nome = req.body.nomes;
+    times[index].estado = req.body.estado;
+    times[index].titulos = req.body.titulos;
+
+    res.json(times)
 })
