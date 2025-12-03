@@ -118,12 +118,12 @@ app.get("/listatimes/:id", (req, res) => {
 });
 
 // Criando rota para alteração (times)
-
 app.put("/listatimes/:id", (req, res) => {
     let index = buscarIdTime(req.params.id);
-    times[index].nome = req.body.nomes;
+
+    times[index].nome = req.body.nome; 
     times[index].estado = req.body.estado;
     times[index].titulos = req.body.titulos;
 
-    res.json(times)
-})
+    res.json(times);
+});
