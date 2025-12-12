@@ -7,15 +7,20 @@ use sistema_produtos;
 create table produtos (
 	id int auto_increment primary key, -- ID ÚNICO
     nome varchar(100) not null, -- Nome produto
-    email varchar(120) not null, -- E-mail (exemplo genérico)
+    email varchar(120) not null, -- Email (exemplo genérico)
     telefone varchar(20), -- Telefone
-    cpf varchar(14), -- CPF
-    logradouro varchar(150) -- Endereço simples
+    cpf varchar(14), -- Cpf
+    endereco varchar(150) -- Endereco simples
 );
 
--- Insere dois registros
-insert into produtos (nome, email, telefone, cpf, logradouro) values
-	('Gustavo Rodrigues', 'gustavrodri@gmail.com', '119784-657', '856.978.382-09', 'Rua SLQ'),
-    ('Julia Rauen', 'juliarauen@gmail.com', '119874-537', '747.586.937-56', 'Rua Salamandra');
+-- Insere dois registro
+insert into produtos (nome, email, telefone, cpf, endereco) values
+	('Eduardo Ramos', 'edu.ramos@orutos.com', '1245454-777', '454.545.454.55', 'Rua Orutos F'),
+    ('Juliana Clara', 'juliana@orutos.com', '45454545-745', '754.988.977-75', 'Rua Orutos');
 
+-- Seleciona o registro onde o id = 1
 select * from produtos where id = 2;
+
+
+
+select * from produtos;
